@@ -1,0 +1,15 @@
+//ABSTRACTS 
+@import 'abstracts/config',
+        'abstracts/fonts',
+        'abstracts/functions',
+        'abstracts//mixins',
+        'abstracts/restart';
+
+
+//TEMPLATES 
+@import 'templates/header.scss',
+        'templates/footer';
+
+
+//COMPONNETS 
+@import 'components/hidden-sections';

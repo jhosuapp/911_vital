@@ -1,0 +1,39 @@
+.hidden-desktop{
+    display: none !important;
+}
+
+
+@media(max-width: breakpoints('portatil')){
+    .show-portatil{
+        display: block !important;
+    }
+    .hidden-portatil{
+        display: none !important;
+    }
+}
+
+@media(max-width: breakpoints('portatil-pequeño')){
+    .show-portatil-pequeño{
+        display: block !important;
+    }
+    .hidden-portatil-pequeño{
+        display: none !important;
+    }
+}
+@media(max-width: breakpoints('ipad-grande')){
+    .show-ipad-grande{
+        display: block !important;
+    }
+    .hidden-ipad-grande{
+        display: none !important;
+    }
+}
+@media(max-width: breakpoints('ipad-pequeña')){
+    .hidden-ipad-pequeña{
+        display: none !important;
+    }
+    .show-ipad-pequeña{
+        display: block !important;
+    }
+
+}

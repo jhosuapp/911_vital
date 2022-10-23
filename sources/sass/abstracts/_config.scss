@@ -1,0 +1,37 @@
+//PALETA DE COLORES
+
+$palette : (
+    'primary': #fff,
+    'secondary': #000,
+    'yellow': #FFEA00,
+    'green': #00A04D,
+    'orange': #EB6100,
+    'green-dark': #0E5521,
+    'green-light': #0F812E,
+    'transparent': transparent
+);   
+
+//FONT SIZE
+
+$font : (
+    
+);
+
+$font-mobile: (
+
+);
+
+//BREAKPOINTS
+
+$breakpoints: (
+    'portatil': 1440px,
+    'portatil-pequeño': 1280px,
+    'ipad-grande': 992px,
+    'ipad-pequeña': 768px,
+    'celular': 576px
+);
+
+//OTROS
+
+$transition-duration: .3s;
+$limit-width: 1550px;
