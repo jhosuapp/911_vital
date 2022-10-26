@@ -1,7 +1,7 @@
 <footer class="footer">
     <div class="footer__container">
         <div class="footer__logo">
-            <img src="img/svg/logo.svg" alt="">
+            <img src="img/svg/logo.svg" alt="logo footer">
         </div>
         <div class="footer__nav">
             <ul>
@@ -27,10 +27,7 @@
         </div>
         <div class="footer__social">
             <a href="#" class="footer__social__item">
-                <img src="img/svg/Facebook.svg" alt="">
-            </a>
-            <a href="#" class="footer__social__item">
-                <img src="img/svg/Facebook.svg" alt="">
+                <img src="img/svg/Facebook.svg" alt="facebook">
             </a>
             <a href="#" class="footer__social__item">
                 <img src="img/svg/Facebook.svg" alt="">

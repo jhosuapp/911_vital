@@ -1,0 +1,24 @@
+.waves{
+    height: 50px;
+    width: 100vw;
+    background: repeat-x top center;
+    background-size: calc(100vw - 200px);
+    background-attachment: initial;
+    position: absolute;
+    top: -49px;
+    left: 0;
+    -webkit-animation: bgMove 131s linear infinite alternate;
+    animation: bgMove 131s linear infinite alternate;
+    overflow: hidden;
+    &--two{
+        transform: scaleX(-1);
+        bottom: 10px;
+        opacity: .5;
+    }
+}
+
+@media(max-width: breakpoint('ipad-grande')){
+    .waves{
+        background-size: 500px;
+    }
+}

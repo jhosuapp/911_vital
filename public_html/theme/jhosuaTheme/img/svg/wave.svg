@@ -1,9 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="198">
-  <defs>
-    <linearGradient id="a" x1="50%" x2="50%" y1="-10.959%" y2="100%">
-      <stop stop-color="#E95D00" stop-opacity=".25" offset="0%"/>
-      <stop stop-color="#E24600" offset="100%"/>
-    </linearGradient>
-  </defs>
-  <path fill="url(#a)" fill-rule="evenodd" d="M.005 121C311 121 409.898-.25 811 0c400 0 500 121 789 121v77H0s.005-48 .005-77z" transform="matrix(-1 0 0 1 1600 0)"/>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 1770 421.5" style="enable-background:new 0 0 1770 421.5;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#EB6100;}
+</style>
+<g>
+	<path class="st0" d="M0,34.4v341.8c122.6-5,286.3-15.7,494.5,8.4c640.4,74.2,989.1,1.7,1275.5-8.4V34.4   c-174,23.2-271,18-623.5-13.8C691.5-20.3,202.3,7.8,0,34.4z"/>
+</g>
 </svg>

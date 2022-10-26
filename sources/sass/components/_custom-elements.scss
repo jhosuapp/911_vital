@@ -1,0 +1,41 @@
+.block-description{
+    p{
+        color: color('green-dark');
+        font-size: 20px;
+        font-weight: 400;
+    }
+    a{
+        color: color('green-dark');
+        font-weight: 500;
+        text-decoration: underline;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+    &--small{
+        p{
+            font-size: 16px;
+        }
+    }
+}
+
+@media(max-width: breakpoint('portatil')){
+    .block-description{
+        p{
+            font-size: 18px;
+        }
+        &--small{
+            p{
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media(max-width: breakpoint('ipad-grande')){
+    .block-description{
+        p{
+            font-size: 16px;
+        }
+    }
+}

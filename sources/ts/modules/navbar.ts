@@ -3,11 +3,16 @@ let getFunctionParentNavbar = function navbar(){
     let getNavBar : any = document.querySelector('.header');
     let getHamburgerNavBar : any = document.querySelector('.header__hamburger'); 
 
+
+        
+
     function _scrollHeader(){
-        let scrollTopPosition = () =>{
-            window.scrollY > 50 ? getNavBar.classList.add('active') : getNavBar.classList.remove('active');
+        if(getNavBar){
+            let scrollTopPosition = () =>{
+                window.scrollY > 50 ? getNavBar.classList.add('active') : getNavBar.classList.remove('active');
+            }
+            window.addEventListener('scroll', scrollTopPosition);
         }
-        window.addEventListener('scroll', scrollTopPosition);
     }
 
     function _hamburger(){
@@ -21,8 +26,10 @@ let getFunctionParentNavbar = function navbar(){
 
     return {
         rturnfunction : function(){
-            _scrollHeader();
-            _hamburger();
+            try{
+                _scrollHeader();
+                _hamburger();
+            }catch(error){ }
         }
     }
 }()

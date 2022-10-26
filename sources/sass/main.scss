@@ -8,8 +8,16 @@
 
 //TEMPLATES 
 @import 'templates/header.scss',
-        'templates/footer';
+        'templates/footer',
+        'templates/validation-age';
 
 
 //COMPONNETS 
-@import 'components/hidden-sections';
+@import 'components/hidden-sections',
+        'components/custom-elements',
+        'components/waves',
+        'components/scroll';
+
+//ANIMATIONS 
+
+@import 'animations/waves';
