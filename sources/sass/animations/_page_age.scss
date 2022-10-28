@@ -1,0 +1,48 @@
+.validation-age.aos-animate{
+    .aos-custom-fade-up,
+    .aos-custom-fade-left,
+    .aos-custom-fade-right{
+        opacity: 1;
+    }
+    .aos-custom-fade-left,
+    .aos-custom-fade-right{
+        transform: translateX(0);
+    }
+    .aos-custom-fade-up{
+        transform: translateY(0);
+    }
+    .validation-age__block.aos-custom-fade-up{
+        transition-delay: .5s;
+    }
+    .validation-age__flex.aos-custom-fade-up{
+        input{
+            &:first-child{
+                transition-delay: .6s;
+            }
+            &:nth-child(2){
+                transition-delay: .7s;
+            }
+            &:nth-child(3){
+                transition-delay: .8s;
+            }
+            &:last-child{
+                transition-delay: 1s;
+            }
+        }
+    }
+    .validation-age__save-data.aos-custom-fade-up{
+        transition-delay: 1.2s;
+    }
+    .validation-age__block--align.aos-custom-fade-up{
+        transition-delay: 1.4s;
+    }
+    .aos-custom-scale{
+        transform: scale(100%);
+    }
+    .validation-age__icons__item.aos-custom-scale{
+        transition-delay: .5s;
+        &:last-child{
+            transition-delay: 1s;
+        }
+    }
+}

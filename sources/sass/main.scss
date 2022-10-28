@@ -5,19 +5,24 @@
         'abstracts//mixins',
         'abstracts/restart';
 
+//LIBRARIES
+@import 'libraries/aos';
+
+//COMPONNETS 
+@import 'components/hidden-sections',
+        'components/custom-elements',
+        'components/waves',
+        'components/scroll',
+        'components/aos',
+        'components/loader';
 
 //TEMPLATES 
 @import 'templates/header.scss',
         'templates/footer',
         'templates/validation-age';
 
-
-//COMPONNETS 
-@import 'components/hidden-sections',
-        'components/custom-elements',
-        'components/waves',
-        'components/scroll';
-
 //ANIMATIONS 
-
-@import 'animations/waves';
+@import 'animations/waves',
+        'animations/aos',
+        'animations/page_age',
+        'animations/loader';

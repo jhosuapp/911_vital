@@ -37,3 +37,7 @@
         </nav>
     </div>
 </header>
+
+<!-- LOADER -->
+
+<?php include './template-parts/loader.php'; ?>

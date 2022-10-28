@@ -1,0 +1,28 @@
+.aos-custom{
+    opacity: 0;
+    &-fade-up{
+        opacity: 0;
+        transform: translateY(20px);
+        transition: 1s ease;
+        transition-property: opacity, transform;
+    }
+    &-fade-left{
+        opacity: 0;
+        transform: translateX(-50px);
+        transition: 1s ease;
+        transition-property: opacity, transform;
+    }
+    &-fade-right{
+        opacity: 0;
+        transform: translateX(50px);
+        transition: 1s ease;
+        transition-property: opacity, transform;
+    }
+    &-scale{
+        transform: scale(0);
+        transition: 1s ease transform;
+    }
+    &.aos-animate{
+        opacity: 1;
+    }
+}

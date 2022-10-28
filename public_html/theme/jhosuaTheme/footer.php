@@ -1,7 +1,7 @@
 <footer class="footer">
     <div class="footer__container">
         <div class="footer__logo">
-            <img src="img/svg/logo.svg" alt="logo footer">
+            <img src="/911_vital/public_html/theme/jhosuaTheme/img/svg/logo.svg" alt="logo footer">
         </div>
         <div class="footer__nav">
             <ul>
@@ -27,21 +27,21 @@
         </div>
         <div class="footer__social">
             <a href="#" class="footer__social__item">
-                <img src="img/svg/Facebook.svg" alt="facebook">
+                <img src="/911_vital/public_html/theme/jhosuaTheme/img/svg/Facebook.svg" alt="facebook">
             </a>
             <a href="#" class="footer__social__item">
-                <img src="img/svg/Facebook.svg" alt="">
+                <img src="/911_vital/public_html/theme/jhosuaTheme/img/svg/Facebook.svg" alt="">
             </a>
             <a href="#" class="footer__social__item">
-                <img src="img/svg/Facebook.svg" alt="">
+                <img src="/911_vital/public_html/theme/jhosuaTheme/img/svg/Facebook.svg" alt="">
             </a>
             <a href="#" class="footer__social__item">
-                <img src="img/svg/Facebook.svg" alt="">
+                <img src="/911_vital/public_html/theme/jhosuaTheme/img/svg/Facebook.svg" alt="">
             </a>
         </div>
     </div>
 </footer>
 </body>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script src="js/mainscript.js"></script>
+    <script src="/911_vital/public_html/theme/jhosuaTheme/js/mainscript.js"></script>
 </html>

@@ -7,8 +7,7 @@
     position: absolute;
     top: -49px;
     left: 0;
-    -webkit-animation: bgMove 131s linear infinite alternate;
-    animation: bgMove 131s linear infinite alternate;
+    animation: bgMove 90s linear infinite alternate;
     overflow: hidden;
     &--two{
         transform: scaleX(-1);

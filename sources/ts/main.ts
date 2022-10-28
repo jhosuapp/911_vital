@@ -3,12 +3,17 @@ import {
 } from "./modules/navbar";
 
 import{
-    getChildsFunction
-} from "./modules/age"
+    getChildFunctionsAge
+} from "./modules/age";
+
+import {
+    getChildFunctionsAos
+} from "./modules/aos";
 
 
 
 window.addEventListener('load', ()=>{
     getFunctionsChild();
-    getChildsFunction();
+    getChildFunctionsAge();
+    getChildFunctionsAos();
 });
