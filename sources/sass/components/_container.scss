@@ -1,0 +1,18 @@
+.container{
+    &-yellow{
+        background: linear-gradient(to bottom, color('yellow') 65%, color('orange'));
+    }
+    &-principal{
+        padding-top: 110px;
+    }
+    &-hidden{
+        overflow: hidden;
+    }
+}
+@media(max-width: breakpoint('ipad-grande')){
+    .container{
+        &-principal{
+            padding-top: 95px;
+        }
+    }
+}

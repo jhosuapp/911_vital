@@ -5,7 +5,7 @@
     top: 0;
     background-color: ('transparent');
     transition: .5s background-color ease;
-    z-index: 99;
+    z-index: 9999;
     &__container{
         width: 90%;
         max-width: $limit-width;

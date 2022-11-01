@@ -1,0 +1,17 @@
+@keyframes logoTransform {
+    from{
+        transform: scale(0);
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+        transform: scale(2);
+    }
+    50%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    to{
+        opacity: 0;
+    }
+}

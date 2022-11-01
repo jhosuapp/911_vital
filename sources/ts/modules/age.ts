@@ -1,5 +1,5 @@
 const age = function(){
-    const getAllInputs : any = document.querySelectorAll('#age input');
+    const getAllInputs : any = document.querySelectorAll<HTMLElement>('#age input');
 
     function _validateAge(){
         getAllInputs.forEach((data: any, indice : number)=>{
@@ -33,7 +33,7 @@ const age = function(){
     }
 
     function _saveDataLocalStorage(){
-        let getButtonSaveData = document.getElementById('saveData');
+        let getButtonSaveData : any= document.querySelector<HTMLElement>('#saveData');
 
         getButtonSaveData?.addEventListener('click', ()=>{
             getButtonSaveData?.classList.toggle('active');

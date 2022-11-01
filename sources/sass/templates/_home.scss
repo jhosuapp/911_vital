@@ -1,0 +1,133 @@
+.home-banner{
+    position: relative;
+    &__flex{
+        width: 90%;
+        max-width: $limit-width;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__image{
+        width: 100%;
+    }
+    &__item{
+        position: relative;
+        z-index: 9;
+        &:first-child{
+            width: 45%;
+        }
+        &:last-child{
+            width: 55%;
+            position: relative;  
+            @include flex; 
+        }
+        &.block-title{
+            max-width: 500px;
+        }
+        h1{
+            margin-bottom: 20px;
+        }
+        &-animate{
+            position: absolute;
+            max-width: 18%;
+            margin-right: 6%;
+            margin-top: 1%;
+            animation: logoTransform 5s ease infinite;
+        }
+    }
+}
+
+.home-flowers{
+    height: 100px;
+    .validation-age__images__absolute{
+        max-width: 125px;
+    }
+    .validation-age__images__absolute{
+        left: -40px;
+        bottom: -40px;
+    }
+    .validation-age__images__absolute--right{
+        left: unset;
+    }
+}
+
+.home-polygon{
+    &__item{
+        position: absolute;
+        max-width: 300px;
+        left: -40px;
+        &:first-child{
+            top: 100px;
+            transform: rotate(180deg);
+        }
+        &:nth-child(2){
+            left: unset;
+            right: -150px;
+            bottom: 100px;
+        }
+        &:last-child{
+            top: 350px;
+        }
+        img{
+            width: 100%;
+        }
+    }
+}
+
+@media(max-width: breakpoint('portatil')){
+    .home-banner{
+        &__item{
+            &.block-title{
+                max-width: 400px;
+            }
+        }
+    }
+    .home-flowers{
+        .validation-age__images__absolute{
+            max-width: 100px;
+        }
+    }
+}
+
+@media(max-width: breakpoint('ipad-grande')){
+    .home-banner{
+        &__flex{
+            flex-direction: column;
+            gap: 40px;
+        }
+        &__item{
+            &.block-title{
+                max-width: 100%;   
+            }
+            &:first-child,
+            &:last-child{
+                width: 100%;
+            }
+            @include flex;
+            flex-direction: column;
+        }
+        &__image{
+            width: 110%;
+            max-width: 500px;
+        }
+    }
+    .home-polygon{
+        &__item{
+            max-width: 100px;
+        }
+    }
+    .home-flowers{
+        height: 50px;
+        .validation-age__images__absolute{
+            max-width: 70px;
+        }
+        .validation-age__images__absolute{
+            left: -10px;
+            bottom: -20px;
+        }
+        .validation-age__images__absolute--right{
+            left: unset;
+        }
+    }
+}

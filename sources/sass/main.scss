@@ -14,15 +14,19 @@
         'components/waves',
         'components/scroll',
         'components/aos',
-        'components/loader';
+        'components/loader',
+        'components/container',
+        'components/button';
 
 //TEMPLATES 
 @import 'templates/header.scss',
         'templates/footer',
-        'templates/validation-age';
+        'templates/validation-age',
+        'templates/home';
 
 //ANIMATIONS 
 @import 'animations/waves',
         'animations/aos',
         'animations/page_age',
-        'animations/loader';
+        'animations/loader',
+        'animations/home';
