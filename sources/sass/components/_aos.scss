@@ -7,14 +7,12 @@
         transition-property: opacity, transform;
     }
     &-fade-left{
-        opacity: 0;
-        transform: translateX(-50px);
+        transform: translateX(-100px);
         transition: 1s ease;
         transition-property: opacity, transform;
     }
     &-fade-right{
-        opacity: 0;
-        transform: translateX(50px);
+        transform: translateX(100px);
         transition: 1s ease;
         transition-property: opacity, transform;
     }
