@@ -9,10 +9,6 @@
     color: color('primary');
     background-color: color('orange');
     @include flex;
-    transition: .3s background-color ease;
-    &:hover{
-        background-color: colorDarken('orange', 05);
-    }
 }
 
 @media(max-width: breakpoint('portatil')){

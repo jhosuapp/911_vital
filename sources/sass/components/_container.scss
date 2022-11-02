@@ -1,9 +1,9 @@
 .container{
     &-yellow{
-        background: linear-gradient(to bottom, color('yellow') 65%, color('orange'));
+        background: linear-gradient(to bottom, color('yellow') 45%, color('orange'));
     }
     &-principal{
-        padding-top: 110px;
+        padding-top: 90px;
     }
     &-hidden{
         overflow: hidden;

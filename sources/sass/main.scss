@@ -13,10 +13,10 @@
         'components/custom-elements',
         'components/waves',
         'components/scroll',
-        'components/aos',
         'components/loader',
         'components/container',
-        'components/button';
+        'components/button',
+        'components/aos';
 
 //TEMPLATES 
 @import 'templates/header.scss',
@@ -29,4 +29,5 @@
         'animations/aos',
         'animations/page_age',
         'animations/loader',
-        'animations/home';
+        'animations/home',
+        'animations/page_home';

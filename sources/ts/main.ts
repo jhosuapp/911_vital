@@ -14,11 +14,14 @@ import {
     getChildParallax
 } from "./modules/parallax";
 
-
+import{
+    getChildSwiper
+} from "./modules/swiper";
 
 window.addEventListener('load', ()=>{
     getFunctionsChild();
     getChildFunctionsAge();
     getChildFunctionsAos();
     getChildParallax();
+    getChildSwiper();
 });
