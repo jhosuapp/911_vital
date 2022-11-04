@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <section class="validation-age" data-aos="animation">
+    <section class="validation-age aos-activate" data-aos="animation">
 
         <!-- IMAGENES HEADER -->
 

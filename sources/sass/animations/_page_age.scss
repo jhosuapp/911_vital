@@ -1,16 +1,4 @@
 .validation-age.aos-animate{
-    .aos-custom-fade-up,
-    .aos-custom-fade-left,
-    .aos-custom-fade-right{
-        opacity: 1;
-    }
-    .aos-custom-fade-left,
-    .aos-custom-fade-right{
-        transform: translateX(0);
-    }
-    .aos-custom-fade-up{
-        transform: translateY(0);
-    }
     .validation-age__block.aos-custom-fade-up{
         transition-delay: .5s;
     }

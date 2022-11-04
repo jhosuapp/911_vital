@@ -1,9 +1,11 @@
-import Swiper from 'swiper';
+import {Swiper, Navigation, Pagination} from 'swiper';
+
 
 const swiper = function(){
 
     function _swiperHome(){
         let swiperHome = new Swiper(".swiper-home", {
+            modules: [Navigation, Pagination],
             slidesPerView: 1,
             spaceBetween: 30,
             pagination: {
@@ -18,7 +20,7 @@ const swiper = function(){
                 },
                 992: {
                     slidesPerView: 3,
-                    spaceBetween: 20,
+                    spaceBetween: 50,
                     allowTouchMove: true,
                 },
             }

@@ -1,6 +1,6 @@
 <?php include 'head.php' ?>
 
-<section class="home-banner container-yellow container-principal container-hidden" data-aos="animation">
+<section class="home-banner container-yellow container-principal container-hidden aos-activate" data-aos="animation">
     <div class="home-banner__flex">
         <div class="home-banner__item block-title aos-custom-fade-up">
             <h1>Mira los videos, responda la trivia y gana premios</h1>
@@ -25,10 +25,12 @@
             <img class="aos-custom-scaleX" src="img/svg/polygon__green.svg" alt="polygon verde">
         </div>
     </div>
+    
+    <!-- SLIDER -->
 
     <div class="swiper swiper-home">
         <div class="swiper-wrapper">
-            <div class="swiper-slide">
+            <div class="swiper-slide aos-custom-fade-up">
                 <div class="swiper-home__item">
                     <img src="img/svg/icon__play.svg" alt="">
                 </div>
@@ -36,17 +38,17 @@
                     <p>Mira nuestros videos y registrate</p>
                 </div>
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide aos-custom-fade-up">
                 <div class="swiper-home__item">
-                    <img src="img/svg/icon__play.svg" alt="">
+                    <img src="img/svg/message.svg" alt="">
                 </div>
                 <div class="swiper-home__item">
                     <p>Mira nuestros videos y registrate</p>
                 </div>
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide aos-custom-fade-up">
                 <div class="swiper-home__item">
-                    <img src="img/svg/icon__play.svg" alt="">
+                    <img src="img/svg/award.svg" alt="">
                 </div>
                 <div class="swiper-home__item">
                     <p>Mira nuestros videos y registrate</p>
@@ -56,6 +58,8 @@
         <div class="swiper-pagination"></div>
     </div>
 
+    <!-- WAVES -->
+    
     <div class="validation-age__images home-flowers">
         <div class="validation-age__images__absolute validation-age__images__absolute--right aos-custom-fade-right">
             <img src="img/png/age__flower_two.png" alt="">
@@ -68,6 +72,35 @@
             <div class="waves waves--two" style="background-image: url('img/svg/wave.svg')"></div>
         </div>
     </div>
+</section>
+
+
+<section class="home-video">
+    <article class="block-title">
+        <div class="home-video__background">
+            <h4>Título del capítulo</h4>
+            <img src="img/png/play_video.png" alt="">
+        </div>
+        <div class="home-video__participate">
+            <h4>Mira este video y contesta la trivia</h4>
+            <a href="#" class="button">Participa ahora</a>
+        </div>
+    </article>
+    <aside class="block-title">
+        <h6>Más capítulos de la serie</h6>
+        <div class="home-video__block">
+            <div class="home-video__item"></div>
+            <p>Jbalvin, sech, una nota (oficial video)</p>
+        </div>
+        <div class="home-video__block">
+            <div class="home-video__item"></div>
+            <p>Jbalvin, sech, una nota (oficial video)</p>
+        </div>
+        <div class="home-video__block">
+            <div class="home-video__item"></div>
+            <p>Jbalvin, sech, una nota (oficial video)</p>
+        </div>
+    </aside>
 </section>
 
 <?php include 'footer.php' ?>

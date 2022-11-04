@@ -41,3 +41,34 @@
         opacity: 1;
     }
 }
+
+//ACTIVACIÓN DE ANIMACIONES
+.aos-activate.aos-animate{
+    .aos-custom-scale{
+        transform: scale(100%);
+    }
+    .aos-custom-scaleX{
+        transform: scale(1);
+        left: 0;
+    }
+    .aos-custom-scaleXreverse{
+        transform: scale(1);
+        right: 0;
+    }
+    .aos-custom-fade-left,
+    .aos-custom-fade-right{
+        transform: translateX(0);
+    }
+    .aos-custom-fade-up{
+        transform: translateY(0);
+    }
+    .aos-custom-rotate{
+        transform: scale(1);
+        opacity: 1;
+    }
+    .aos-custom-fade-up,
+    .aos-custom-fade-left,
+    .aos-custom-fade-right{
+        opacity: 1;
+    }
+}
