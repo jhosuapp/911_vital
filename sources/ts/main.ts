@@ -18,10 +18,15 @@ import{
     getChildSwiper
 } from "./modules/swiper";
 
+import {
+    getChildModal
+} from "./modules/modal";
+
 window.addEventListener('load', ()=>{
     getFunctionsChild();
     getChildFunctionsAge();
     getChildFunctionsAos();
     getChildParallax();
     getChildSwiper();
+    getChildModal();
 });

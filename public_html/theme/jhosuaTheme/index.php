@@ -76,31 +76,55 @@
 
 
 <section class="home-video">
-    <article class="block-title">
-        <div class="home-video__background">
+    <article>
+        <div class="home-video__background block-title open-modal" data-video="https://www.youtube.com/embed/w4yffMlSXuo">
             <h4>Título del capítulo</h4>
             <img src="img/png/play_video.png" alt="">
         </div>
-        <div class="home-video__participate">
-            <h4>Mira este video y contesta la trivia</h4>
+        <div class="home-video__participate block-title">
+            <h4>Mira este video <br>y contesta la trivia</h4>
             <a href="#" class="button">Participa ahora</a>
         </div>
     </article>
-    <aside class="block-title">
-        <h6>Más capítulos de la serie</h6>
-        <div class="home-video__block">
-            <div class="home-video__item"></div>
-            <p>Jbalvin, sech, una nota (oficial video)</p>
+    <aside class="home-video__animation aos-activate" data-aos="animation">
+        <div class="block-title aos-custom-fade-up">
+            <h6>Más capítulos de la serie</h6>
         </div>
-        <div class="home-video__block">
-            <div class="home-video__item"></div>
-            <p>Jbalvin, sech, una nota (oficial video)</p>
-        </div>
-        <div class="home-video__block">
-            <div class="home-video__item"></div>
-            <p>Jbalvin, sech, una nota (oficial video)</p>
+        <div class="home-video__container">
+            <div class="home-video__block block-description aos-custom-fade-up">
+                <div data-video="https://www.youtube.com/embed/w4yffMlSXuo" class="home-video__item open-modal" style="background-image: url('img/jpg/background_video_small.jpg')"></div>
+                <p>Jbalvin, sech, una nota (oficial video)</p>
+            </div>
+            <div class="home-video__block block-description aos-custom-fade-up">
+                <div data-video="https://www.youtube.com/embed/w4yffMlSXuo" class="home-video__item open-modal" style="background-image: url('img/jpg/background_video_small.jpg')"></div>
+                <p>Jbalvin, sech, una nota</p>
+            </div>
+            <div class="home-video__block block-description aos-custom-fade-up">
+                <div data-video="https://www.youtube.com/embed/w4yffMlSXuo" class="home-video__item open-modal" style="background-image: url('img/jpg/background_video_small.jpg')"></div>
+                <p>Jbalvin, sech, una nota (oficial video)</p>
+            </div>
+            <div class="home-video__block block-description aos-custom-fade-up">
+                <div data-video="https://www.youtube.com/embed/w4yffMlSXuo" class="home-video__item open-modal" style="background-image: url('img/jpg/background_video_small.jpg')"></div>
+                <p>Jbalvin, sech, una nota (oficial video)</p>
+            </div>
         </div>
     </aside>
 </section>
+
+
+
+<!-- MODAL VIDEOS -->
+
+<div class="modal-home">
+    <div class="modal-home__background close-modal"></div>
+    <div class="modal-home__container">
+        <img src="img/svg/close__modal.svg" alt="" class="modal-home__close close-modal">
+        <iframe  id="iframe" frameborder="0"></iframe>
+        <div class="home-video__participate block-title">
+            <h4>Trivia 1 </h4>
+            <a href="#" class="button">Participa ahora</a>
+        </div>
+    </div>
+</div>
 
 <?php include 'footer.php' ?>

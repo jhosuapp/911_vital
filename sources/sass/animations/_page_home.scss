@@ -41,6 +41,41 @@
     }
 }
 
+.home-video__animation.aos-animate{
+    .block-title{
+
+    }
+    .home-video__block{
+        &::before{
+            width: 100%;
+        }
+        &:first-child{
+            transition-delay: .25s;
+            &::before{
+                transition-duration: 1s;
+            }
+        }
+        &:nth-child(2){
+            transition-delay: .5s;
+            &::before{
+                transition-duration: 1.5s;
+            }
+        }
+        &:nth-child(3){
+            transition-delay: .75s;
+            &::before{
+                transition-duration: 2s;
+            }
+        }
+        &:nth-child(4){
+            transition-delay: 1s;
+            &::before{
+                transition-duration: 2.5s;
+            }
+        }
+    }
+}
+
 @media(max-width: breakpoint('celular')){
     .home-banner.aos-animate{
         .swiper-home{

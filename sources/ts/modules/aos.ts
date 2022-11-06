@@ -20,11 +20,9 @@ const aos = function(){
     }
 }();
 
-
 let getChildFunctionsAos = ()=>{
     aos.rturnFunctions();
 }
-
 
 export{
     getChildFunctionsAos
