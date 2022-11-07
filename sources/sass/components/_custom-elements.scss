@@ -1,7 +1,7 @@
 .block-description{
     p{
         color: color('green-dark');
-        font-size: 20px;
+        font-size: 2rem;
         font-weight: 400;
     }
     a{
@@ -14,7 +14,7 @@
     }
     &--small{
         p{
-            font-size: 16px;
+            font-size: 1.6rem;
         }
     }
 }
@@ -42,11 +42,11 @@
 @media(max-width: breakpoint('portatil')){
     .block-description{
         p{
-            font-size: 18px;
+            font-size: 1.8rem;
         }
         &--small{
             p{
-                font-size: 16px;
+                font-size: 1.6rem;
             }
         }
     }
@@ -67,7 +67,7 @@
 @media(max-width: breakpoint('ipad-grande')){
     .block-description{
         p{
-            font-size: 16px;
+            font-size: 1.6rem;
         }
     }
     .block-title{

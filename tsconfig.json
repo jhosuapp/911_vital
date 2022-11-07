@@ -5,7 +5,8 @@
     "allowJs": true,  
     // "module": "commonjs",
     "strict": true,   
-    "target": "es6",   
-    "allowSyntheticDefaultImports": true
+    "target": "es2017",   
+    "allowSyntheticDefaultImports": true,
+    "lib": ["es2015", "es2017.object", "dom"]
   }
 }

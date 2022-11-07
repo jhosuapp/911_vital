@@ -22,6 +22,10 @@ import {
     getChildModal
 } from "./modules/modal";
 
+import {
+    getChildTrivia
+} from "./modules/trivia";
+
 window.addEventListener('load', ()=>{
     getFunctionsChild();
     getChildFunctionsAge();
@@ -29,4 +33,5 @@ window.addEventListener('load', ()=>{
     getChildParallax();
     getChildSwiper();
     getChildModal();
+    getChildTrivia();
 });

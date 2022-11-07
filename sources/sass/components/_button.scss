@@ -8,6 +8,10 @@
     border-radius: 8px;
     color: color('primary');
     background-color: color('orange');
+    text-decoration: none;
+    outline: inherit;
+    border: none;
+    cursor: pointer;
     @include flex;
 }
 
