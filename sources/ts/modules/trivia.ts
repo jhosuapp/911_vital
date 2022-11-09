@@ -6,7 +6,11 @@ const trivia = function(){
     let getNumberDinamicSize = document.querySelector<HTMLElement>('#triviaSize');
     let getProgressTrivia = document.querySelector<HTMLElement>('#triviaProgress');
     let getFormTrivia = document.querySelector<HTMLElement>('#form-trivia');
+    let getBlockQuestions = document.querySelector<HTMLElement>('#block-questions');
+    let getCotaninerResults = document.querySelector<HTMLElement>('#container-results');
+    let getLoaderQuestions = document.querySelector<HTMLElement>('.loader');
 
+    //ASIGNAMOS TAMAÑO Y VALUES NULL PARA LOS CONTENEDORES DE CADA PREGUNTA
     function _triviaContainer(){
         getAllContainersQuestions[0].classList.add('active');
         getAllContainersQuestions.forEach((data : any, indice : any)=>{
@@ -15,7 +19,8 @@ const trivia = function(){
         });
     }
 
-    function _trivia(){
+    //VALIDAMOS LAS PREGUNTAS CORRECTAS Y GUARDAMOS VALUES EN CONTENEDOR PADRE
+    function _triviaQuestions(){
         function reUseNumberDinamic(number : any){
             getNumberDinamicSize ? getNumberDinamicSize.innerHTML = `${number} pregunta de ${getAllContainersQuestions.length}` : false;
         }
@@ -37,10 +42,11 @@ const trivia = function(){
         getAllButtonsTrivia.forEach((data : any)=>{
             data.addEventListener('click', ()=>{
                 let getParentNode = data.parentNode;
-                if(getParentNode.getAttribute('data-selectQuestion')){
+                let getDataLenght = getParentNode.nextElementSibling.getAttribute('data-length');
+                if(getParentNode.getAttribute('data-selectQuestion') && parseInt(getDataLenght) <= getAllContainersQuestions.length){
                     getParentNode.classList.remove('active');
                     getParentNode.nextElementSibling.classList.add('active');
-                    reUseNumberDinamic(getParentNode.nextElementSibling.getAttribute('data-length'));
+                    reUseNumberDinamic(getDataLenght);
                 }else{
                     data.classList.add('invalid');
                 }
@@ -49,22 +55,39 @@ const trivia = function(){
         });
     }   
 
+    //CALCULAMOS EL TIEMPO LIMITE DE LA TRIVIA
     function _triviaProgress(){
-        let time = 120000;
-
+        let time : any = 180000;
+        let totalTime : any = 0;
         setInterval(()=>{
             let timeModify = time - 1000;
             time = timeModify;
-            let calcPercent = (100 * time) / 120000;
+            let calcPercent = (100 * time) / 180000;
             getProgressTrivia ? getProgressTrivia.style.width = `${calcPercent}%` : false;
+            let totalTimeModify = totalTime + 1000;
+            totalTime = totalTimeModify;
+            localStorage.setItem('tiempo_empleado', totalTime);
         },1000);
     }
 
-    function _triviaSubmit(){
+    //RESULTADOS GENERALES DE LA TRIVIA
+    function _triviaResult(){
+        let getAllQuestionsTrue = document.querySelectorAll<HTMLElement>('.dataTrue');
+        return getAllQuestionsTrue.length;
+    }
 
-        let arrayWithValues : any = [];
-        getAllContainersQuestions.forEach((data : any)=>{
-            arrayWithValues.push(data.getAttribute('data-value'));
+    //ENVIAMOS DATA AL BACKEND
+    function _triviaSubmit(){
+        let removeSection = ()=>{
+            getLoaderQuestions?.classList.remove('active');
+            setTimeout(()=>{
+                getBlockQuestions?.classList.add('hidden');
+            },500);
+        }
+
+        getAllButtonsTrivia[getAllButtonsTrivia.length - 1].addEventListener('click', ()=>{
+            let validateLastQuestion = getAllContainersQuestions[getAllContainersQuestions.length -1].getAttribute('data-selectQuestion');
+            validateLastQuestion ? removeSection() : false;
         });
 
         getFormTrivia?.addEventListener('submit', (e : any)=>{
@@ -76,21 +99,52 @@ const trivia = function(){
             })
             .then(res => res.json())
             .then(data =>{
-                console.log(data);
+                if(data){
+                    setTimeout(()=>{
+                        getLoaderQuestions?.classList.add('active');
+                    },1500);
+
+                    let getTotalTime : any = localStorage.getItem('tiempo_empleado');
+                    let getMinutes : any = getTotalTime / 60000;
+                    let getSeconds : any = (getTotalTime / 1000) - (parseInt(getMinutes) * 60);
+                    getSeconds < 10 ? getSeconds = "0" + getSeconds : getSeconds = getSeconds;
+
+                    let createDivWithTemplate = document.createElement('div');
+                    let templateWithTimes = `
+                        <hgroup class="trivia-results__block block-title">
+                            <h1>¡Fin de la trivia!</h1>
+                            <h6>Tus resultados</h6>
+                            <h6>
+                                Acertaste <b>${_triviaResult()}/${getAllContainersQuestions.length}</b> preguntas<br>
+                                Tu tiempo fue de <b>${parseInt(getMinutes)}:${getSeconds}</b>
+                            </h6>
+                            <h6>Este es tu puesto dentro del ranking</h6>
+                        </hgroup>
+                        <div class="trivia-results__block trivia-results__place">
+                            <div class="trivia-results__position">
+                                <div class="trivia-results__number">1</div>
+                                <p>Ernesto Torres</p>
+                                <div class="trivia-results__time">
+                                    <span>${parseInt(getMinutes)}:${getSeconds}</span>
+                                    <span>${20 * _triviaResult()} Pts</span>
+                                </div>
+                            </div>
+                        </div>`;
+                    createDivWithTemplate.innerHTML = templateWithTimes;
+                    getCotaninerResults?.prepend(createDivWithTemplate);
+                    getCotaninerResults?.classList.add('active');
+                    window.scrollTo(0, 0);
+                    console.log(data);
+                }
             }).catch(error =>{
-                
+                // console.log(error);
             });
         });
-
-    }
-
-    function _triviaResult(){
-        let getAllQuestionsTrue = document.querySelectorAll<HTMLElement>('.dataTrue');
     }
 
     return {
         getChildrenFunction : function(){
-            _trivia();
+            _triviaQuestions();
             _triviaContainer();
             _triviaProgress();
             _triviaSubmit();

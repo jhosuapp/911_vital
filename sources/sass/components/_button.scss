@@ -12,7 +12,12 @@
     outline: inherit;
     border: none;
     cursor: pointer;
+    border: 2px solid color('orange');
     @include flex;
+    &--transparent{
+        background-color: color('transparent');
+        color: color('orange');
+    }
 }
 
 @media(max-width: breakpoint('portatil')){

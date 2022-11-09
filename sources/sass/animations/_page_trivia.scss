@@ -1,0 +1,93 @@
+.trivia.aos-animate {
+    .home-polygon__item{
+        &:first-child,
+        &:last-child{
+            left: -150px;
+        }
+        &:nth-child(2){
+            bottom: unset;
+            top: -50px;
+            right: -100px;
+        }
+    }
+    .trivia-polygon{
+        .home-polygon__item{
+            &:first-child{
+                img{
+                    transition-delay: 1s;
+                }
+            }
+            &:nth-child(2){
+                img{
+                    transition-delay: 1.25s;
+                }
+            }
+            &:last-child{
+                img{
+                    transition-delay: 1.5s;
+                }
+            }
+        }
+    }
+    .trivia__questions{
+        label{
+            animation: trivia-fade-up 1s ease forwards .75s;
+            &:nth-child(3){
+                animation-delay: 1s;
+            }
+            &:nth-child(5){
+                animation-delay: 1.25s;
+            }
+            &:nth-child(7){
+                animation-delay: 1.5s;
+            }
+        }
+    }
+    .trivia__progress{
+        transition-delay: .5s;
+    }
+    .trivia__questions .button{
+        transition-delay: 1.75s;
+    }
+}
+
+@media(max-width: breakpoint('ipad-grande')){
+    .trivia.aos-animate {
+        .home-polygon__item{
+            &:first-child,
+            &:last-child{
+                left: -20px;
+            }
+            &:nth-child(2){
+                top: 0px;
+                right: -20px;
+            }
+        }
+    }
+}
+
+
+@keyframes trivia-fade-up{
+    from{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes opacity-to-absolute {
+    from{
+        position: relative;
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+        position: relative;
+    }
+}

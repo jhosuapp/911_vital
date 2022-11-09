@@ -1,12 +1,20 @@
 .trivia{
+    position: relative;
     &__container{
         width: 90%;
         max-width: $limit-width;
         margin: auto;
         padding-top: 60px;
-        padding-bottom: 100px;
+        padding-bottom: 180px;
         @include flex;
         flex-direction: column;
+        transition: 1s opacity ease;
+        &.hidden{
+            opacity: 0;
+            pointer-events: none;
+            position: absolute;
+            display: none;
+        }
     }
     &__block{
         max-width: 650px;
@@ -65,6 +73,7 @@
             font-weight: 500;
             transition: .3s ease;
             transition-property: color, background-color;
+            opacity: 0;
             &.active{
                 background-color: color('green');
                 color: color('primary');
@@ -106,20 +115,107 @@
         transition: .5s all ease;
         pointer-events: none;
         &.active{
-            position: relative;
-            opacity: 1;
             pointer-events: all;
+            animation: opacity-to-absolute 1s ease forwards;
         }
+    }
+}
+
+.trivia-results{
+    opacity: 0;
+    position: absolute;
+    transform: 1s ease opacity .6s;
+    pointer-events: none;
+    &__block{
+        h1{
+            margin-bottom: 25px;
+        }
+        h6{
+            color: color('green-dark');
+            margin-top: 15px;
+        }
+    }
+    &__flex{
+        @include flex;
+        gap: 20px;
+    }
+    &__block{
+        margin-bottom: 30px;
+    }
+    &__place{
+        width: fit-content;
+        background-color: color('primary');
+        padding: 5px 40px;
+        border-radius: 8px;
+    }
+    &__position{
+        @include flex;
+        gap: 15px;
+        p{
+            color: color('green-dark');
+            font-weight: 300;
+            font-size: 1.7rem;
+        }
+        span{
+            color: color('green');
+            font-weight: 600;
+            font-size: 1.7rem;
+        }
+    }
+    &__number{
+        width: 30px;
+        height: 30px;
+        background-color: color('orange');
+        @include flex;
+        color: color('primary');
+        border-radius: 100px;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    &__time{
+        margin-left: 20px;
+        span{
+            &:first-child{
+                padding-right: 15px;
+            }
+            &:last-child{
+                padding-left: 15px;
+                position: relative;
+                border-left: 1px solid color('green');
+            }
+        }
+    }
+    &.active{
+        pointer-events: all;
+        position: relative;
+        opacity: 1;
+    }
+}
+
+.trivia-banner{
+    position: absolute;
+    bottom: 40px;
+    right: -40px;
+    max-width: 550px;
+    .home-banner__item{
+        width: 100%;
     }
 }
 
 @media(max-width: breakpoint('portatil')){
     .trivia{
+        &__container{
+            padding-top: 40px;
+            padding-bottom: 100px;
+        }
         form{
             label{
                 font-size: 1.8rem;
             }
         }
+    }
+    .trivia-banner{
+        max-width: 450px;
     }
 }
 
@@ -127,6 +223,7 @@
     .trivia{
         &__container{
             padding-top: 10px;
+            padding-bottom: 180px;
         }
         &__block{
             p{
@@ -138,5 +235,44 @@
                 font-size: 1.6rem;
             }
         }
+    }
+    .trivia-results{
+        &__flex{
+            flex-direction: column;
+            gap: 25px;
+            a{
+                width: 100%;
+            }
+        }
+        &__place{
+            padding: 5px 10px;
+            width: 100%
+        }
+        &__position{
+            gap: 10px;
+        }
+        &__position{
+            p, span{
+                font-size: 1.6rem;
+            }
+        }
+        &__number{
+            font-size: 1.8rem;
+        }
+        &__time{
+            margin-left: 15px;
+            span{
+                &:first-child{
+                    padding-right: 10px;
+                }
+                &:last-child{
+                    padding-left: 10px;
+                }
+            }
+        }
+    }
+    .trivia-banner{
+        max-width: 300px;
+        bottom: 0;
     }
 }

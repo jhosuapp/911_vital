@@ -17,7 +17,7 @@
         transition-property: opacity, transform;
     }
     &-scale{
-        transform: scale(0);
+        transform: scaleX(0);
         transition: 1s ease transform;
     }
     &-scaleX,
