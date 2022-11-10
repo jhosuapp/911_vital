@@ -155,7 +155,9 @@ const trivia = function(){
 }();
 
 let getChildTrivia = ()=>{
-    trivia.getChildrenFunction();
+    try{
+        trivia.getChildrenFunction();
+    }catch(error){}
 }
 
 export {

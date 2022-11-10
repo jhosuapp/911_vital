@@ -26,6 +26,10 @@ import {
     getChildTrivia
 } from "./modules/trivia";
 
+import {
+    getChildRanking
+} from "./modules/ranking";
+
 window.addEventListener('load', ()=>{
     getFunctionsChild();
     getChildFunctionsAge();
@@ -34,4 +38,5 @@ window.addEventListener('load', ()=>{
     getChildSwiper();
     getChildModal();
     getChildTrivia();
+    getChildRanking();
 });
