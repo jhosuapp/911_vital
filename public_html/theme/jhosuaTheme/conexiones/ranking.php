@@ -22,9 +22,19 @@
         $id=$row['id'];
         $primera_pregunta=$row['primera_pregunta'];
         $segunda_pregunta=$row['segunda_pregunta'];
+        $tercera_pregunta=$row['tercera_pregunta'];
+        $tiempo=$row['tiempo'];
+        $preguntasbien=$row['preguntasbien'];
+        $puntos=$row['puntos'];
         
 
-        $clientes[] = array('id'=> $id, 'primera_pregunta'=> $primera_pregunta, 'segunda_pregunta'=> $segunda_pregunta);
+        $clientes[] = array('id'=> $id, 
+                            'primera_pregunta'=> $primera_pregunta, 
+                            'segunda_pregunta'=> $segunda_pregunta, 
+                            'tercera_pregunta'=> $tercera_pregunta, 
+                            'tiempo'=> intval($tiempo),
+                            'preguntasbien'=> intval($preguntasbien),
+                            'puntos'=> intval($puntos));
 
     }
         

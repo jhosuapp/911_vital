@@ -9,6 +9,9 @@ const trivia = function(){
     let getBlockQuestions = document.querySelector<HTMLElement>('#block-questions');
     let getCotaninerResults = document.querySelector<HTMLElement>('#container-results');
     let getLoaderQuestions = document.querySelector<HTMLElement>('.loader');
+    let getInputTime : any = document.querySelector<HTMLElement>('#time');
+    let getInputTotalQuestions : any = document.querySelector<HTMLElement>('#totalQuestions');
+    let getInputPoints : any = document.querySelector<HTMLElement>('#points');
 
     //ASIGNAMOS TAMAÑO Y VALUES NULL PARA LOS CONTENEDORES DE CADA PREGUNTA
     function _triviaContainer(){
@@ -73,6 +76,10 @@ const trivia = function(){
     //RESULTADOS GENERALES DE LA TRIVIA
     function _triviaResult(){
         let getAllQuestionsTrue = document.querySelectorAll<HTMLElement>('.dataTrue');
+        getInputTime.value = localStorage.getItem('tiempo_empleado');
+        getInputTotalQuestions.value = getAllQuestionsTrue.length;
+        getInputPoints.value = getAllQuestionsTrue.length * 20;
+
         return getAllQuestionsTrue.length;
     }
 
@@ -137,7 +144,7 @@ const trivia = function(){
                     console.log(data);
                 }
             }).catch(error =>{
-                // console.log(error);
+                console.log(error);
             });
         });
     }

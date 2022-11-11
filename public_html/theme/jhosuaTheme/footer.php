@@ -42,6 +42,5 @@
     </div>
 </footer>
 </body>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script> -->
     <script src="/911_vital/public_html/theme/jhosuaTheme/js/mainscript.js"></script>
 </html>

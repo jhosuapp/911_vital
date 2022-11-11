@@ -76,9 +76,9 @@
                 </div>
                 
                 <!-- INPUTS CON VALUES DE TIEMPO Y PREGUNTAS ACERTADAS -->
-                <input type="hidden" name="time">
-                <input type="hidden" name="totalQuestions">
-                <input type="hidden" name="points">
+                <input type="hidden" name="time" id="time">
+                <input type="hidden" name="totalQuestions" id="totalQuestions">
+                <input type="hidden" name="points" id="points">
 
                 <div id="count_questions" data-length="finish"></div>
             </form>

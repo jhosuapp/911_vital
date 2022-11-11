@@ -4,7 +4,7 @@
     <div class="home-banner__flex">
         <div class="home-banner__item block-title aos-custom-fade-up">
             <h1>Mira los videos, responda la trivia y gana premios</h1>
-            <a href="#" class="button aos-custom-fade-up">Iniciar trivia</a>
+            <a href="trivia.php" class="button aos-custom-fade-up">Iniciar trivia</a>
         </div>
         <div class="home-banner__item home-banner__item--animation aos-custom-rotate">
             <img src="img/png/banner__image.png" class="home-banner__image" alt="911 vital">
@@ -83,7 +83,7 @@
         </div>
         <div class="home-video__participate block-title">
             <h4>Mira este video <br>y contesta la trivia</h4>
-            <a href="#" class="button">Participa ahora</a>
+            <a href="trivia.php" class="button">Participa ahora</a>
         </div>
     </article>
     <aside class="home-video__animation aos-activate" data-aos="animation">
@@ -122,7 +122,7 @@
         <iframe  id="iframe" frameborder="0"></iframe>
         <div class="home-video__participate block-title">
             <h4>Trivia 1 </h4>
-            <a href="#" class="button">Participa ahora</a>
+            <a href="trivia.php" class="button">Participa ahora</a>
         </div>
     </div>
 </div>
