@@ -10,14 +10,20 @@ const ranking = function(){
             let [posicion] = data;
 
             let ordery = posicion.sort((a:any, b:any)=>{
+                if(a.tiempo < b.tiempo){
+                    return -1;
+                }
+            });
+
+            let orderyPoints = ordery.sort((a:any, b:any)=>{
                 if(a.puntos > b.puntos){
                     return -1;
                 }
             });
 
-            if(ordery){
+            if(orderyPoints){
 
-                ordery.map(({tiempo = 0, nombre = "Jhosua Penagos", puntos = 0}, indice:any)=>{
+                orderyPoints.map(({tiempo = 0, nombre = "Jhosua Penagos", puntos = 0}, indice:any)=>{
 
                     let getTotalTime : any = tiempo;
                     let getMinutes : any = getTotalTime / 60000;
