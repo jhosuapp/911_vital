@@ -16,7 +16,7 @@
         <!-- TRIVIA RESULTS -->
         <div class="trivia-results trivia__container" id="container-results">
             <div class="trivia-results__block trivia-results__flex">
-                <a href="" class="button">Iniciar Trivia</a>
+                <a href="ranking.php" class="button">Ver Ranking</a>
                 <a href="" class="button button--transparent">Ver más videos</a>
             </div>
         </div>

@@ -1,6 +1,6 @@
 <header class="header">
     <div class="header__container">
-        <a href="/" class="header__logo">
+        <a href="/911_vital/public_html/theme/jhosuaTheme/" class="header__logo">
             <img src="img/svg/logo.svg" alt="logo">
         </a>
         <div class="header__hamburger">
@@ -11,10 +11,10 @@
         <nav class="header__nav">
             <ul class="header__nav__list">
                 <li>
-                    <a href="#">PARTICIPA Y GANA</a>
+                    <a href="trivia.php">PARTICIPA Y GANA</a>
                 </li>
                 <li>
-                    <a href="#">Ranking</a>
+                    <a href="ranking.php">Ranking</a>
                 </li>
                 <li>
                     <a href="#">Mi perfil</a>

@@ -1,0 +1,41 @@
+.ranking-results{
+    @include flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: auto;
+    padding: 60px 0 180px 0;
+    width: 90%;
+    h1{
+        text-align: center;
+    }
+}
+
+.ranking-time{
+    padding-top: 20px;
+    .trivia-results__position{
+        justify-content: flex-start;
+    }
+    .trivia-results__block{
+        margin-bottom: 15px;   
+        width: 100%;
+        padding: 10px 40px;   
+    }
+    .trivia-results__number{
+        background-color: color('green');
+    }
+}
+
+@media(max-width: breakpoint('ipad-grande')){
+    .ranking-results{
+        padding: 20px 0 180px 0;
+        h6{
+            text-align: center;
+        }
+    }
+    .ranking-time{
+        padding-top: 10px;
+        .trivia-results__block{
+            padding: 8px 10px;   
+        }
+    }
+}
